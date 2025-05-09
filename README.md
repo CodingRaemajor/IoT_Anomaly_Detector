@@ -68,3 +68,9 @@ LSTM autoencoder anomaly detection
 Parth Patel
 Computer Science Student @ University of Regina
 📫 iparth2166@gmail.com
+
+
+---
+### 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
