@@ -11,13 +11,13 @@ def is_anomaly(data):
     device = data["device_id"]
     temp = data["temperature"]
     humidity = data["humidity"]
-    motion = data["motion"]
+    motion_detected = data.get("motion_detected", False)
 
     # Motion anomaly detection
     if device not in motion_counts:
         motion_counts[device] = 0
     
-    if motion:
+    if motion_detected:
         motion_counts[device] += 1
     else:
         motion_counts[device] = 0
@@ -43,5 +43,5 @@ while True:
     except Exception as e:
         print(f"Error processing line: {e}")
     
-    time.sleep(1)    
+    time.sleep(1)
     
